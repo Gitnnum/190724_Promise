@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            
+            // arr1.forEach((item,index)=>{
+                // arr1.forEach((item,index)=>{
+                //    if(arr2.find((item2)=>item.indexOf(item2)===0)){
+                //        a= arr2.find((item2)=>item.indexOf(item2)===-1)
+                //         arr1.splice(index+1,0,a)
+                //    }
+                // })
+                // arr2.forEach((item2,index2)=>{
+                //     if(item.indexOf(item2)===-1){
+                //         arr1.splice(index+1,0,item2)
+                //     }
+                // })
+            // })
+            // arr2.forEach((item2,index2)=>{
+            //     const re = arr1.find((item,index)=>item2.indexOf(item)===-1)
+            //     arr1.splice(index2+1,0,re)
+            // })
+            // var ary1 = ['11', '22', '33' , '44']; 
+            // var ary2 = ['12', '23', '34']; 
+            // var num= 2; 
+            // ary2.unshift(num, 0); 
+            // Array.prototype.splice.apply(ary1, ary2); 
+            // console.log(ary1);
+            // console.log(arr1)
+            let arr1 = ['a1','a2','b1','b2','c1','c2']
+            let arr2 = ['a','b','c']
+            let isTrue = false
+            arr2.forEach((item2)=>{
+                arr1.forEach((item,index)=>{
+                if(item.indexOf(item2) === 0){
+                    if(!isTrue){
+                        isTrue = true
+                        arr1.splice(index,0,item2)
+                    }
+                    
+                }
+            })
+            isTrue = false
+            })
+            console.log(arr1)
+        </script>
+    </body>
+</html>
